@@ -71,7 +71,7 @@ export default function addProductForm() {
 
             <Modal animation="false" isOpen={formOpen} toggle={formToggle} size="lg" centered>
                 <form onSubmit={handleSubmit} method='POST'>
-                    <ModalHeader toggle={formToggle}>Add product</ModalHeader>
+                    <ModalHeader className='text-dark' toggle={formToggle}>Add product</ModalHeader>
                     <ModalBody>
                         <FormGroup>
                             <Label for="productName" className='mb-0 mt-2'>
