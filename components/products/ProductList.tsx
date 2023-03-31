@@ -10,8 +10,8 @@ function ProductList(props: { data: any }) {
     const [searchName, setSearchName] = useState('');
     const [searchType, setSearchType] = useState('');
 
-    const filterProducts = () => {
-        let filteredData = 
+    //This variable will contain filtered products based on search bar values
+    const filteredProducts  = 
             props.data
             //Take data and filter it based on type and the name user is searching for
             .filter((product: Product) => {
@@ -32,14 +32,11 @@ function ProductList(props: { data: any }) {
                 } else {
                     return product;
                 }
-            });
-        
-        return filteredData;
-    };         
+            });       
 
     return (
         <div>
-            <h1 className="display-5 mb-3">Current active projects: {props.data.length}</h1>
+            <h1 className="display-3 m-3">Project count: {filteredProducts.length}</h1>
             <div className="mx-auto w-75">
                 <FormGroup className="w-75 mx-auto mb-5">
                     <div className="row align-items-end justify-content-between">
@@ -93,7 +90,7 @@ function ProductList(props: { data: any }) {
 
                     <tbody>
                         {  
-                            filterProducts()
+                            filteredProducts
                             .map((product: Product, index: number, filteredData: Product[]) => {
                                 return <tr key={product.productId}>
                                     <td className="col-2">{product.productId}</td>
