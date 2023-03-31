@@ -11,13 +11,17 @@ This is a [Next.js] project with Bootstrap/Reactstrap and my submission to bcgov
  These endpoints are:
  
  ## GET All
- 
+
+| Attribute | Description |
+| --- | --- |
 | Endpoint | GET /api/products |
 | Usage | Retrieve all products stored |
 | Response | A list of all products stored |
 
  ## GET ONE
  
+| Attribute | Description |
+| --- | --- |
 | Endpoint | GET /api/products/:productId |
 | Usage | Retrieve a product based on it's id  |
 | Parameters | 'productId' - the id of the product to retrieve |
@@ -25,13 +29,17 @@ This is a [Next.js] project with Bootstrap/Reactstrap and my submission to bcgov
 
 ## POST
 
+| Attribute | Description |
+| --- | --- |
 | Endpoint | POST /api/products |
 | Purpose | Create a new product |
 | Parameters | A JSON string with informations for the new product |
 | Response |  |
 
  ## PATCH
- 
+
+| Attribute | Description |
+| --- | --- | 
 | Endpoint | PATCH /api/products|
 | Purpose | Update a boat's information |
 | Request parameters | A JSON string with informations for the updated product |
