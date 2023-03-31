@@ -11,6 +11,7 @@ export default function handler(
 ) 
 { 
   let products = require('../../../json/data.json');
+  let msg;
   const fs = require('fs');
 
   if(req.method === "GET"){
@@ -23,7 +24,7 @@ export default function handler(
 
     fs.writeFileSync('json/data.json', JSON.stringify(products, null, 4));
     
-    let msg = '{"status":"Product added!"}';
+    msg = '{"status":"Product added!"}';
     res.status(201).json(JSON.parse(msg));
   } else if(req.method === "PATCH"){
         
@@ -49,7 +50,7 @@ export default function handler(
     products = newProducts;
     fs.writeFileSync('json/data.json', JSON.stringify(products, null, 4));
     
-    let msg = '{"status":"Product updated!"}';
+    msg = '{"status":"Product updated!"}';
     res.status(201).json(JSON.parse(msg));
 
 }

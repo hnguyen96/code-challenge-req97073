@@ -46,7 +46,8 @@ export default function EditProductForm(props: {data: any}) {
     }
 
     const formToggle = () => {
-        //fetch the data first then open form
+        //Fetch the data first then open form
+        //On form open, it will be populated with the current selected product data
         if(formOpen == false){
             getProductData(props.data);
         }
